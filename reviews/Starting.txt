@@ -1,0 +1,46 @@
+Running the System
+
+There are three parts of the system
+1)Scrapy
+2)Data exporter
+3)Flask Api
+
+Code for scrapy and Data exporter is here
+https://github.com/kartikjain/pythonScrapper
+
+Install the required modules from requirements.txt file or
+
+pip install scrapy
+pip install pymongo
+
+Go to <>/pythonScrapper/hotelAdvisor
+and type scrapy crawl hotel
+
+This will start the data scraping process.
+Please stay connected to the internet .
+
+The data will start getting collected in reviews.json and items.json file.
+In case you want to stop in between press Control+C just once . In a few seconds it will stop naturally .
+If pressed twice it will force close and data will become corrupt.
+
+Once Data is ready in these two files run the exporter file.
+
+python export.py
+
+Before Doing so please provide correct Mongodb credentials at the top of the file.
+This process will start saving the data from the two files into Mongo db in a database called platform and collection called hotels.
+
+In order to run the flask api server install the required modules from requirements.txt or
+
+pip install flask
+pip install pymongo
+pip install flask_cors
+
+Run the file python reviews.py
+Provide the correct mongodb credentials at the top of the file.
+Read the Documentation file for how to use the server .
+
+
+
+
+

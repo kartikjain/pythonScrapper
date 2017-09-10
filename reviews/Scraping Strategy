@@ -1,0 +1,23 @@
+Scraping starts from this url
+
+https://www.tripadvisor.in/Hotels-g304555-oa600-Jaipur_Jaipur_District_Rajasthan-Hotels.html
+
+The Name , Total reviews, rank and Rating is scrapped for each hotel.
+Once this page is done the url from next button is picked up and next set of hotels are scrapped until there is no next.
+
+Also On clicking each hotel the hotel profile page opens.
+https://www.tripadvisor.in/Hotel_Review-g304555-d307723-Reviews-Alsisar_Haveli-Jaipur_Jaipur_District_Rajasthan.html
+
+For every hotel we open this page and from there we open the first review page.
+https://www.tripadvisor.in/ShowUserReviews-g304555-d307723-r521181463-Alsisar_Haveli-Jaipur_Jaipur_District_Rajasthan.html#CHECK_RATES_CONT
+
+This page provides us information in an easier way.
+For each review we scrap those things which are mandatory for users to fill i.e
+Rating
+Review
+Traveller type - Friends/business/Couple/Solo
+Travel_time - Month of travel
+
+At the bottom we have next set of reviews followed by a hyperlinked Next button.
+We navigate to the next button until there is no more reviews for the hotel.
+

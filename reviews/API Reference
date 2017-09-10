@@ -1,0 +1,56 @@
+Host: http://54.84.17.148:3000
+
+Endpoints
+
+GET
+/hotels
+This call will give you unfiltered list of all hotels . Reviews for each hotel will not be sent.
+
+For eg try this url in browser
+http://54.84.17.148:3000/hotels
+
+Optionally you can add more parameters to this end point as explained below.
+
+GET
+/hotels/key/value
+
+This call will give you a filtered list of hotels having this key value pair in the documents.
+
+For eg http://54.84.17.148:3000/hotels/rating/4
+This url will give all hotels whose rating is 4
+
+
+
+GET
+/hotel/<hotel-id>/reviews
+
+Get All reviews for a hotel whose id is given
+
+Optionally you can add more parameters to this end point as explained below.
+
+For eg
+http://54.84.17.148:3000/hotel/939664/reviews
+This url will give all reviews for the hotel with id 939664
+
+
+GET
+/hotel/<hotel-id>/reviews/<key>/<value>/<op>
+This end point is used to filter reviews .
+op can be "=" for all key value pairs
+op can also be ">" for those key value pairs whose values are numeric
+
+http://54.84.17.148:3000/hotel/939664/reviews/rating/4/>
+This url will give the reviews for the same hotel but only those whose rating is above 4 i.e 4 or 5
+
+http://54.84.17.148:3000/hotel/939664/reviews/rating/4/=
+
+This url will give only those ratings of this hotel whose value is 4
+
+http://54.84.17.148:3000/hotel/939664/reviews/travel_time/August/=
+
+This url will give all the rating given by users who travelled during August i.e whose travel_time is August
+
+
+
+
+
